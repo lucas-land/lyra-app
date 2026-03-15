@@ -1,0 +1,53 @@
+.lyra-toolbar {
+  --background: var(--lyra-green);
+  --color: #fff;
+  --min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline-start: 16px;
+
+  ion-title.lyra-toolbar-title {
+    font-weight: 600;
+  }
+
+  .lyra-back-button {
+    --color: #fff;
+  }
+}
+
+.lyra-header-brand {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 50px;
+}
+
+.lyra-header-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.lyra-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.lyra-title {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.lyra-subtitle {
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  font-weight: 600;
+}

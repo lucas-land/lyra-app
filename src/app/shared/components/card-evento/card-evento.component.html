@@ -1,0 +1,21 @@
+<ion-card class="card-evento">
+  <div class="card-evento-inner">
+    <div class="card-evento-data-block">
+      @if (dataDia && dataMes) {
+        <span class="card-evento-dia">{{ dataDia }}</span>
+        <span class="card-evento-mes">{{ dataMes }}</span>
+        <span class="card-evento-ano">{{ dataAno }}</span>
+      } @else {
+        <span class="card-evento-data-fallback">{{ data }}</span>
+      }
+    </div>
+    <div class="card-evento-info">
+      <h3 class="card-evento-titulo">{{ titulo }}</h3>
+      <p class="card-evento-local">{{ local }}</p>
+      <p class="card-evento-descricao">{{ descricao }}</p>
+      <ion-button fill="solid" size="small" class="card-evento-ver-mais" (click)="verMais.emit(id)">
+        Ver mais
+      </ion-button>
+    </div>
+  </div>
+</ion-card>

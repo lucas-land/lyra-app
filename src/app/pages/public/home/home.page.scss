@@ -1,0 +1,54 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+:host ion-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+:host ion-content {
+  flex: 1;
+  min-height: 0;
+}
+
+.home-content {
+  padding: 16px;
+  padding-bottom: 80px;
+}
+
+.home-section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.section-link {
+  color: var(--lyra-green);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+app-card-noticia,
+app-card-evento {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.lyra-cta {
+  --background: var(--lyra-green);
+  margin-top: 24px;
+}

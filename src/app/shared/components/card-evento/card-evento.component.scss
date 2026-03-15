@@ -1,0 +1,105 @@
+.card-evento {
+  --background: #ffffff;
+  margin: 0 0 16px 0;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.card-evento-inner {
+  display: flex;
+  align-items: stretch;
+  min-height: 100px;
+}
+
+.card-evento-data-block {
+  flex: 0 0 auto;
+  width: 72px;
+  min-height: 100%;
+  background: #34c759;
+  border-radius: 12px 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 10px;
+  gap: 2px;
+}
+
+.card-evento-dia {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.card-evento-mes {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.card-evento-ano {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
+}
+
+.card-evento-data-fallback {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.card-evento-info {
+  flex: 1;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.card-evento-titulo {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333333;
+  line-height: 1.3;
+}
+
+.card-evento-local {
+  margin: 0 0 4px 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.35;
+}
+
+.card-evento-descricao {
+  margin: 0 0 8px 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #777777;
+  line-height: 1.4;
+}
+
+.card-evento-ver-mais {
+  margin-top: 4px;
+  align-self: flex-start;
+  --background: var(--lyra-green, #34c759);
+  --color: #fff;
+  --border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  min-height: 32px;
+}

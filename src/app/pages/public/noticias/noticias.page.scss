@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+:host ion-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+:host ion-content {
+  flex: 1;
+  min-height: 0;
+}
+
+.noticias-list {
+  padding: 16px;
+  padding-bottom: 80px;
+}
+
+app-card-noticia {
+  display: block;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

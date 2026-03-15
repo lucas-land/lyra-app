@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">App Sociedade de Canto Lyra</string>
+    <string name="title_activity_main">App Sociedade de Canto Lyra</string>
+    <string name="package_name">com.sociedade.lyraapp</string>
+    <string name="custom_url_scheme">com.sociedade.lyraapp</string>
+</resources>

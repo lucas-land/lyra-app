@@ -1,0 +1,20 @@
+<ion-page>
+  <app-header titulo="Notícias" [showBackButton]="true"></app-header>
+
+  <ion-content>
+    <div class="noticias-list">
+      @for (noticia of noticias; track noticia.id) {
+        <app-card-noticia
+          [imagem]="noticia.imagem"
+          [titulo]="noticia.titulo"
+          [descricao]="noticia.descricao"
+          [data]="noticia.data"
+          [id]="noticia.id"
+          (verMais)="onVerMais($event)"
+        />
+      }
+    </div>
+  </ion-content>
+
+  <app-bottom-nav></app-bottom-nav>
+</ion-page>

@@ -1,0 +1,22 @@
+.card-noticia {
+  margin: 0 0 16px 0;
+}
+
+.card-noticia-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card-noticia-data {
+  color: var(--lyra-green);
+  font-size: 0.9rem;
+}
+
+.card-noticia-ver-mais {
+  --background: var(--lyra-green);
+  --color: #fff;
+}

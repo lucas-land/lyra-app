@@ -1,0 +1,17 @@
+<ion-card class="card-noticia">
+  @if (imagem) {
+    <ion-img [src]="imagem" [alt]="titulo"></ion-img>
+  }
+  <ion-card-header>
+    <ion-card-title>{{ titulo }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>{{ descricao }}</p>
+    <div class="card-noticia-footer">
+      <span class="card-noticia-data">{{ data }}</span>
+      <ion-button fill="solid" size="small" class="card-noticia-ver-mais" (click)="verMais.emit(id)">
+        Ver mais
+      </ion-button>
+    </div>
+  </ion-card-content>
+</ion-card>

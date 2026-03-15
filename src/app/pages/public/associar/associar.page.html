@@ -1,0 +1,88 @@
+<ion-page>
+  <app-header titulo="Associar-se" [showBackButton]="true"></app-header>
+
+  <ion-content>
+    <div class="associar-content">
+      <!-- Card 1: Seja um Sócio - Informações e benefícios -->
+      <ion-card class="associar-card">
+        <ion-card-content>
+          <div class="card-info-row">
+            <div class="card-info-text">
+              <div class="titulo-row">
+                <span class="associar-icon-wrap">
+                  <ion-icon name="person-add-outline" class="associar-icon"></ion-icon>
+                </span>
+                <h2 class="card-titulo">Seja um Sócio</h2>
+              </div>
+              <p class="associar-descricao">
+                Faça parte da Sociedade de Canto Lyra! Junte-se a nós e participe de uma das mais tradicionais instituições culturais da cidade. Não é necessário experiência prévia em canto.
+              </p>
+              <div class="beneficios-box">
+                <strong>Benefícios:</strong>
+                <ul>
+                  <li>Aulas de técnica vocal</li>
+                  <li>Participação em apresentações e eventos</li>
+                  <li>Acesso a workshops e masterclasses</li>
+                  <li>Convivência em um ambiente cultural rico</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Card 2: Formulário Solicitar Associação -->
+      <ion-card class="associar-card">
+        <ion-card-header>
+          <ion-card-title>Solicitar Associação</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <form [formGroup]="form" (ngSubmit)="enviarAssociacao()">
+            <ion-item>
+              <ion-label position="stacked">Nome Completo</ion-label>
+              <ion-input
+                formControlName="nome"
+                placeholder="Seu nome completo"
+                type="text"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">E-mail</ion-label>
+              <ion-input
+                formControlName="email"
+                placeholder="seu&#64;email.com"
+                type="email"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Telefone</ion-label>
+              <ion-input
+                formControlName="telefone"
+                placeholder="(00) 00000-0000"
+                type="tel"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Mensagem</ion-label>
+              <ion-textarea
+                formControlName="mensagem"
+                placeholder="Digite sua mensagem..."
+                rows="4"
+              ></ion-textarea>
+            </ion-item>
+            <ion-button
+              type="submit"
+              expand="block"
+              color="success"
+              [disabled]="form.invalid"
+            >
+              Enviar Solicitação
+            </ion-button>
+          </form>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-content>
+
+  <app-bottom-nav></app-bottom-nav>
+</ion-page>
