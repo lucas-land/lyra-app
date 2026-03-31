@@ -31,10 +31,16 @@ const routes: Routes = [
     loadComponent: () =>
       import('./pages/public/associar/associar.page').then((m) => m.AssociarPage),
   },
-  { path: 'admin/login', component: PlaceholderComponent },
-  { path: 'admin/dashboard', component: PlaceholderComponent },
-  { path: 'admin/noticias', component: PlaceholderComponent },
-  { path: 'admin/eventos', component: PlaceholderComponent },
+
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./pages/admin/dashboard/dashboard.page').then(m => m.DashboardPage),
+  },
+  {
+    path: 'login',
+    loadComponent: () => import('./pages/admin/login/login.page').then(m => m.LoginPage),
+  }
+
 ];
 
 @NgModule({
