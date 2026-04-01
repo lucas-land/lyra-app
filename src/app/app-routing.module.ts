@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login-user', pathMatch: 'full' },
   {
     path: 'home',
     loadChildren: () =>
@@ -34,12 +34,17 @@ const routes: Routes = [
 
   {
     path: 'dashboard',
-    loadChildren: () => import('./pages/admin/dashboard/dashboard.page').then(m => m.DashboardPage),
+    loadComponent: () => import('./pages/admin/dashboard/dashboard.page').then(m => m.DashboardPage),
   },
   {
     path: 'login',
     loadComponent: () => import('./pages/admin/login/login.page').then(m => m.LoginPage),
+  },
+  {
+    path: 'login-user',
+    loadComponent: () => import('./pages/public/login-user/login-user.page').then(m => m.LoginUserPage),
   }
+
 
 ];
 

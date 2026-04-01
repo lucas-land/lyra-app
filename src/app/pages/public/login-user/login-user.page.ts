@@ -3,14 +3,15 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-login-user',
+  templateUrl: './login-user.page.html',
+  styleUrls: ['./login-user.page.scss'],
   standalone: true,
   imports: [IonicModule, RouterModule],
 })
 
-export class LoginPage implements OnInit {
+
+export class LoginUserPage implements OnInit {
 
   constructor() { }
 

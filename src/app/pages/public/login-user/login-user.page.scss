@@ -1,0 +1,50 @@
+.login-user-content {
+  --background: linear-gradient(180deg, #00A63E, #016630);;
+}
+
+.login-user-content::part(scroll) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo {
+  width: 120px;
+}
+
+.title {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.main-button {
+  --background: #ffffff;
+  --color: #27ae60;
+  --border-radius: 15px;
+  font-size: 16px;
+  text-transform: none;
+  width: 40%;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.secondary-button {
+  --color: #ffffff;
+  text-transform: none;
+  text-decoration: underline;
+  font-size: 13px;
+  width: auto;
+  margin: 0 auto; 
+}
