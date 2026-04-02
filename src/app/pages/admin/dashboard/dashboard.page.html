@@ -1,13 +1,59 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>dashboard</ion-title>
+<ion-header>
+  <ion-toolbar class="custom-header">
+
+    <div class="header-content">
+
+      <div class="header-left">
+        <img src="/assets/Logo_Lyra_Branco.png" alt="Logo" class="logo">
+
+        <div class="header-texts">
+          <span class="title">Painel Administrativo</span>
+          <span class="subtitle">Sociedade de Canto Lyra</span>
+        </div>
+      </div>
+
+      <ion-button  fill="clear" class="logout-button" routerLink="/login">
+        <ion-icon name="log-out-outline"></ion-icon>
+        Sair
+      </ion-button>
+
+    </div>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">dashboard</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="dashboard-content">
+
+  <h1 class="main-title">Gerenciamento de Conteúdo</h1>
+
+  <ion-button
+    class="card-button"
+    fill="clear"
+    routerLink="/admin/noticias"
+  >
+    <div class="card">
+      <div class="icon-circle">
+        <ion-icon name="newspaper-outline"></ion-icon>
+      </div>
+
+      <h2>Notícias</h2>
+      <p>Gerenciar notícias, adicionar, editar e excluir publicações</p>
+    </div>
+  </ion-button>
+
+  <ion-button
+    class="card-button"
+    fill="clear"
+    routerLink="/admin/eventos"
+  >
+    <div class="card">
+      <div class="icon-circle">
+        <ion-icon name="calendar-outline"></ion-icon>
+      </div>
+
+      <h2>Eventos</h2>
+      <p>Gerenciar eventos, adicionar, editar e excluir programações</p>
+    </div>
+  </ion-button>
+
 </ion-content>

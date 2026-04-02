@@ -31,7 +31,6 @@ const routes: Routes = [
     loadComponent: () =>
       import('./pages/public/associar/associar.page').then((m) => m.AssociarPage),
   },
-
   {
     path: 'dashboard',
     loadComponent: () => import('./pages/admin/dashboard/dashboard.page').then(m => m.DashboardPage),
