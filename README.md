@@ -55,25 +55,22 @@ Abra o projeto no Android Studio e execute no emulador ou dispositivo.
 
 ## Comandos principais
 
-| Comando | Descrição |
-|--------|-----------|
-| `ionic serve` | Sobe o app em modo desenvolvimento no navegador |
-| `ionic build` | Gera o build de produção na pasta `www/` |
-| `npx cap sync` | Sincroniza o conteúdo web com o projeto nativo |
-| `npx cap add android` | Adiciona a plataforma Android (já configurado) |
-| `ng generate component path/name` | Gera novo componente Angular |
+
+| Comando                           | Descrição                                       |
+| --------------------------------- | ----------------------------------------------- |
+| `ionic serve`                     | Sobe o app em modo desenvolvimento no navegador |
+| `ionic build`                     | Gera o build de produção na pasta `www/`        |
+| `npx cap sync`                    | Sincroniza o conteúdo web com o projeto nativo  |
+| `npx cap add android`             | Adiciona a plataforma Android (já configurado)  |
+| `ng generate component path/name` | Gera novo componente Angular                    |
+
 
 ## Estrutura do projeto
 
-- **`src/app/core`** – Serviços, guards e models (ex.: Firebase)
-- **`src/app/shared`** – Componentes, interfaces e pipes reutilizáveis
-- **`src/app/pages/public`** – Telas da área pública (home, notícias, eventos, contato, associar)
-- **`src/app/pages/admin`** – Telas da área administrativa (login, dashboard, gestão de notícias e eventos)
-- **`src/environments`** – Configurações por ambiente (ex.: credenciais Firebase)
-
-## Configuração do Firebase
-
-Os arquivos `src/environments/environment.ts` e `environment.prod.ts` contêm placeholders para as credenciais do Firebase. Preencha com os valores do seu projeto no [Console do Firebase](https://console.firebase.google.com/) quando for implementar a integração.
+- `**src/app/core**` – Serviços, guards e models (ex.: Firebase)
+- `**src/app/shared**` – Componentes, interfaces e pipes reutilizáveis
+- `**src/app/pages/public**` – Telas da área pública (home, notícias, eventos, contato, associar)
+- `**src/app/pages/admin**` – Telas da área administrativa (login, dashboard, gestão de notícias e eventos)
 
 ## Licença
 

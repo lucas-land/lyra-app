@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { PlaceholderComponent } from './placeholder/placeholder.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login-user', pathMatch: 'full' },
@@ -14,13 +13,21 @@ const routes: Routes = [
     loadComponent: () =>
       import('./pages/public/noticias/noticias.page').then((m) => m.NoticiasPage),
   },
-  { path: 'noticia/:id', component: PlaceholderComponent },
+  {
+    path: 'noticia/:id',
+    loadComponent: () =>
+      import('./pages/public/noticia/noticia.page').then((m) => m.NoticiaPage),
+  },
   {
     path: 'eventos',
     loadComponent: () =>
       import('./pages/public/eventos/eventos.page').then((m) => m.EventosPage),
   },
-  { path: 'evento/:id', component: PlaceholderComponent },
+  {
+    path: 'evento/:id',
+    loadComponent: () =>
+      import('./pages/public/evento/evento.page').then((m) => m.EventoPage),
+  },
   {
     path: 'contato',
     loadComponent: () =>

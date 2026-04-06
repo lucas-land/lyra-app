@@ -1,0 +1,42 @@
+<ion-content
+  [fullscreen]="true"
+  [scrollY]="false"
+  class="evento-page-content"
+>
+  @if (evento) {
+    <div class="evento-layout">
+      <div class="evento-hero" [class.evento-hero--data-only]="!temImagem">
+        @if (temImagem) {
+          <img [src]="evento.imagem!" [alt]="evento.titulo" />
+        } @else {
+          <div
+            class="evento-hero-data"
+            role="img"
+            [attr.aria-label]="'Data do evento: ' + dataFormatada"
+          >
+            <span class="evento-hero-dia">{{ evento.data.dia }}</span>
+            <span class="evento-hero-mes">{{ evento.data.mes }}</span>
+            <span class="evento-hero-ano">{{ evento.data.ano }}</span>
+          </div>
+        }
+        <button type="button" class="evento-back" (click)="voltar()" aria-label="Voltar">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="evento-lower">
+        <h1 class="evento-titulo">{{ evento.titulo }}</h1>
+        <div class="evento-meta-row evento-meta-data">
+          <ion-icon name="calendar-outline" class="evento-meta-icon"></ion-icon>
+          <span class="evento-data-text">{{ dataFormatada }}</span>
+        </div>
+        <div class="evento-meta-row evento-meta-local">
+          <ion-icon name="location-outline" class="evento-meta-icon"></ion-icon>
+          <span class="evento-local-text">{{ evento.local }}</span>
+        </div>
+        <div class="evento-scroll">
+          <p class="evento-conteudo">{{ evento.conteudo }}</p>
+        </div>
+      </div>
+    </div>
+  }
+</ion-content>

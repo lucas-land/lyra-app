@@ -1,0 +1,26 @@
+<ion-content
+  [fullscreen]="true"
+  [scrollY]="false"
+  class="noticia-page-content"
+>
+  @if (noticia) {
+    <div class="noticia-layout">
+      <div class="noticia-hero">
+        <img [src]="noticia.imagem" [alt]="noticia.titulo" />
+        <button type="button" class="noticia-back" (click)="voltar()" aria-label="Voltar">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="noticia-lower">
+        <h1 class="noticia-titulo">{{ noticia.titulo }}</h1>
+        <div class="noticia-data-row">
+          <ion-icon name="calendar-outline" class="noticia-data-icon"></ion-icon>
+          <span class="noticia-data-text">{{ dataFormatada }}</span>
+        </div>
+        <div class="noticia-scroll">
+          <p class="noticia-conteudo">{{ noticia.conteudo }}</p>
+        </div>
+      </div>
+    </div>
+  }
+</ion-content>

@@ -1,7 +1,18 @@
-.lyra-toolbar {
+:host ion-header {
+  min-height: 64px;
+}
+
+:host ion-toolbar {
+  --min-height: 64px;
+  min-height: 64px;
+  height: 64px;
+  box-sizing: border-box;
+}
+
+/* Título da página + voltar (layout Ionic clássico, fundo sólido) */
+.lyra-toolbar-page {
   --background: var(--lyra-green);
   --color: #fff;
-  --min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,38 +27,119 @@
   }
 }
 
-.lyra-header-brand {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  min-height: 50px;
+/* Home + admin: padding só via variáveis Ionic (evita conflito com height: 64px no host) */
+.lyra-toolbar-brand {
+  --background: linear-gradient(90deg, #00a63e, #016630);
+  --color: #fff;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 12px;
+  --padding-end: 12px;
 }
 
-.lyra-header-logo {
-  height: 40px;
-  width: auto;
+/* Centraliza o conteúdo default do toolbar no eixo vertical (slot interno `content`) */
+:host ion-toolbar.lyra-toolbar-brand::part(content) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+:host ion-toolbar.lyra-toolbar-brand--public::part(content) {
+  justify-content: center;
+}
+
+.lyra-brand-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+/* Header público (home): marca centralizada; com voltar, grid equilibra as laterais */
+.lyra-toolbar-brand--public .lyra-brand-header-content {
+  justify-content: center;
+}
+
+.lyra-brand-header-content--balanced {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.lyra-brand-edge--start {
+  grid-column: 1;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+}
+
+.lyra-brand-header-content--balanced .lyra-brand-header-left {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.lyra-brand-edge--end {
+  grid-column: 3;
+  justify-self: end;
+  width: 48px;
+  min-width: 48px;
+  pointer-events: none;
+}
+
+.lyra-brand-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lyra-brand-logo {
+  width: 32px;
+  height: auto;
   object-fit: contain;
   display: block;
 }
 
-.lyra-titles {
+.lyra-brand-texts {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
+  align-items: flex-start;
 }
 
-.lyra-title {
-  font-size: 1rem;
-  font-weight: 400;
+.lyra-brand-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
   line-height: 1.2;
 }
 
-.lyra-subtitle {
-  font-size: 1.4rem;
-  letter-spacing: 0.05em;
+.lyra-brand-subtitle {
+  color: #fff;
+  font-size: 14px;
   line-height: 1.2;
-  font-weight: 600;
+}
+
+.lyra-brand-logout {
+  --background: rgba(255, 255, 255, 0.1);
+  --color: #fff;
+  --border-radius: 10px;
+  --padding-top: 4px;
+  --padding-bottom: 4px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  text-transform: none;
+  font-size: 12px;
+}
+
+.lyra-brand-logout ion-icon {
+  margin-right: 4px;
+  font-size: 16px;
+}
+
+.lyra-brand-back {
+  --color: #fff;
+  margin-inline: -4px 4px;
 }

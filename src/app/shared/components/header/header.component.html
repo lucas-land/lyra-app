@@ -1,22 +1,57 @@
 <ion-header>
-  <ion-toolbar class="lyra-toolbar">
-    @if (showBackButton) {
+  @if (variant === 'admin') {
+    <ion-toolbar class="lyra-toolbar-brand">
+      <div class="lyra-brand-header-content">
+        <div class="lyra-brand-header-left">
+          <img src="assets/Logo_Lyra_Branco.png" alt="Logo" class="lyra-brand-logo" />
+          <div class="lyra-brand-texts">
+            <span class="lyra-brand-title">Painel Administrativo</span>
+            <span class="lyra-brand-subtitle">Sociedade de Canto Lyra</span>
+          </div>
+        </div>
+        <ion-button fill="clear" class="lyra-brand-logout" routerLink="/login">
+          <ion-icon name="log-out-outline"></ion-icon>
+          Sair
+        </ion-button>
+      </div>
+    </ion-toolbar>
+  } @else if (titulo && showBackButton) {
+    <ion-toolbar class="lyra-toolbar-page">
       <ion-buttons slot="start">
         <ion-button (click)="voltar()" class="lyra-back-button" fill="clear">
           <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
         </ion-button>
       </ion-buttons>
-    }
-    @if (titulo) {
       <ion-title class="lyra-toolbar-title">{{ titulo }}</ion-title>
-    } @else {
-      <div class="lyra-header-brand">
-        <img src="assets/Logo_Lyra_Branco.png" alt="" class="lyra-header-logo" />
-        <div class="lyra-titles">
-          <span class="lyra-title">Sociedade de</span>
-          <span class="lyra-subtitle">Canto Lyra</span>
+    </ion-toolbar>
+  } @else if (titulo && !showBackButton) {
+    <ion-toolbar class="lyra-toolbar-page">
+      <ion-title class="lyra-toolbar-title">{{ titulo }}</ion-title>
+    </ion-toolbar>
+  } @else {
+    <ion-toolbar class="lyra-toolbar-brand lyra-toolbar-brand--public">
+      <div
+        class="lyra-brand-header-content"
+        [class.lyra-brand-header-content--balanced]="showBackButton"
+      >
+        @if (showBackButton) {
+          <div class="lyra-brand-edge lyra-brand-edge--start">
+            <ion-button (click)="voltar()" class="lyra-brand-back" fill="clear" aria-label="Voltar">
+              <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+            </ion-button>
+          </div>
+        }
+        <div class="lyra-brand-header-left">
+          <img src="assets/Logo_Lyra_Branco.png" alt="" class="lyra-brand-logo" />
+          <div class="lyra-brand-texts">
+            <span class="lyra-brand-title">Sociedade de</span>
+            <span class="lyra-brand-subtitle">Canto Lyra</span>
+          </div>
         </div>
+        @if (showBackButton) {
+          <div class="lyra-brand-edge lyra-brand-edge--end" aria-hidden="true"></div>
+        }
       </div>
-    }
-  </ion-toolbar>
+    </ion-toolbar>
+  }
 </ion-header>

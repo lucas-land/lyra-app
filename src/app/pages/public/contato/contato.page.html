@@ -1,99 +1,97 @@
-<ion-page>
-  <app-header titulo="Contato" [showBackButton]="true"></app-header>
+<app-header titulo="Contato" [showBackButton]="true"></app-header>
 
-  <ion-content>
-    <div class="contato-content">
-      <!-- Card 1: Informações de contato -->
-      <ion-card class="contato-card contato-info-card">
-        <ion-card-header>
-          <ion-card-title>Entre em Contato</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-list lines="none">
-            <ion-item>
-              <ion-icon name="logo-whatsapp" slot="start" class="contato-icon"></ion-icon>
-              <ion-label>
-                <span class="contato-label">WhatsApp</span>
-                <p>(51) 99999-9999</p>
-              </ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-icon name="mail-outline" slot="start" class="contato-icon"></ion-icon>
-              <ion-label>
-                <span class="contato-label">E-mail</span>
-                <p>contato&#64;lyra.com.br</p>
-              </ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-icon name="call-outline" slot="start" class="contato-icon"></ion-icon>
-              <ion-label>
-                <span class="contato-label">Telefone</span>
-                <p>(51) 3333-4444</p>
-              </ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-icon name="location-outline" slot="start" class="contato-icon"></ion-icon>
-              <ion-label>
-                <span class="contato-label">Endereço</span>
-                <p class="contato-endereco">Rua das Flores, 123<br>Centro - Porto Alegre/RS<br>CEP: 90000-000</p>
-              </ion-label>
-            </ion-item>
-          </ion-list>
-        </ion-card-content>
-      </ion-card>
+<ion-content>
+  <div class="contato-content">
+    <!-- Card 1: Informações de contato -->
+    <ion-card class="contato-card contato-info-card">
+      <ion-card-header>
+        <ion-card-title>Entre em Contato</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-icon name="logo-whatsapp" slot="start" class="contato-icon"></ion-icon>
+            <ion-label>
+              <span class="contato-label">WhatsApp</span>
+              <p>(51) 99999-9999</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="mail-outline" slot="start" class="contato-icon"></ion-icon>
+            <ion-label>
+              <span class="contato-label">E-mail</span>
+              <p>contato&#64;lyra.com.br</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="call-outline" slot="start" class="contato-icon"></ion-icon>
+            <ion-label>
+              <span class="contato-label">Telefone</span>
+              <p>(51) 3333-4444</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="location-outline" slot="start" class="contato-icon"></ion-icon>
+            <ion-label>
+              <span class="contato-label">Endereço</span>
+              <p class="contato-endereco">Rua das Flores, 123<br>Centro - Porto Alegre/RS<br>CEP: 90000-000</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
 
-      <!-- Card 2: Formulário de contato -->
-      <ion-card class="contato-card">
-        <ion-card-header>
-          <ion-card-title>Envie uma Mensagem</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <form [formGroup]="form" (ngSubmit)="enviarMensagem()">
-            <ion-item>
-              <ion-label position="stacked">Nome</ion-label>
-              <ion-input
-                formControlName="nome"
-                placeholder="Seu nome completo"
-                type="text"
-              ></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="stacked">E-mail</ion-label>
-              <ion-input
-                formControlName="email"
-                placeholder="seu&#64;email.com"
-                type="email"
-              ></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="stacked">Telefone</ion-label>
-              <ion-input
-                formControlName="telefone"
-                placeholder="(00) 00000-0000"
-                type="tel"
-              ></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="stacked">Mensagem</ion-label>
-              <ion-textarea
-                formControlName="mensagem"
-                placeholder="Digite sua mensagem..."
-                rows="4"
-              ></ion-textarea>
-            </ion-item>
-            <ion-button
-              type="submit"
-              expand="block"
-              color="success"
-              [disabled]="form.invalid"
-            >
-              Enviar Mensagem
-            </ion-button>
-          </form>
-        </ion-card-content>
-      </ion-card>
-    </div>
-  </ion-content>
+    <!-- Card 2: Formulário de contato -->
+    <ion-card class="contato-card">
+      <ion-card-header>
+        <ion-card-title>Envie uma Mensagem</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="form" (ngSubmit)="enviarMensagem()">
+          <ion-item>
+            <ion-label position="stacked">Nome</ion-label>
+            <ion-input
+              formControlName="nome"
+              placeholder="Seu nome completo"
+              type="text"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">E-mail</ion-label>
+            <ion-input
+              formControlName="email"
+              placeholder="seu&#64;email.com"
+              type="email"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Telefone</ion-label>
+            <ion-input
+              formControlName="telefone"
+              placeholder="(00) 00000-0000"
+              type="tel"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Mensagem</ion-label>
+            <ion-textarea
+              formControlName="mensagem"
+              placeholder="Digite sua mensagem..."
+              rows="4"
+            ></ion-textarea>
+          </ion-item>
+          <ion-button
+            type="submit"
+            expand="block"
+            color="success"
+            [disabled]="form.invalid"
+          >
+            Enviar Mensagem
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
 
-  <app-bottom-nav></app-bottom-nav>
-</ion-page>
+<app-bottom-nav></app-bottom-nav>

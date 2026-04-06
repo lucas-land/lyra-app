@@ -1,22 +1,20 @@
-<ion-page>
-  <app-header titulo="Eventos" [showBackButton]="true"></app-header>
+<app-header titulo="Eventos" [showBackButton]="true"></app-header>
 
-  <ion-content>
-    <div class="eventos-list">
-      @for (evento of eventos; track evento.id ?? evento.titulo) {
-        <app-card-evento
-          [dataDia]="evento.data.dia"
-          [dataMes]="evento.data.mes"
-          [dataAno]="evento.data.ano"
-          [titulo]="evento.titulo"
-          [local]="evento.local"
-          [descricao]="evento.descricao"
-          [id]="evento.id ?? ''"
-          (verMais)="onVerMais($event)"
-        />
-      }
-    </div>
-  </ion-content>
+<ion-content>
+  <div class="eventos-list">
+    @for (evento of eventos; track evento.id) {
+      <app-card-evento
+        [dataDia]="evento.data.dia"
+        [dataMes]="evento.data.mes"
+        [dataAno]="evento.data.ano"
+        [titulo]="evento.titulo"
+        [local]="evento.local"
+        [descricao]="evento.descricao"
+        [id]="evento.id"
+        (verMais)="onVerMais($event)"
+      />
+    }
+  </div>
+</ion-content>
 
-  <app-bottom-nav></app-bottom-nav>
-</ion-page>
+<app-bottom-nav></app-bottom-nav>

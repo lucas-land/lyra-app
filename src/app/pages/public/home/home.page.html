@@ -1,46 +1,47 @@
-<ion-page>
-  <app-header></app-header>
+<app-header></app-header>
 
-  <ion-content #content>
-    <div class="home-content">
-      <section class="home-section">
-        <div class="section-header">
-          <h2>Últimas Notícias</h2>
-          <a routerLink="/noticias" class="section-link">Ver todas →</a>
-        </div>
-        @for (noticia of noticias; track noticia.titulo) {
-          <app-card-noticia
-            [imagem]="noticia.imagem"
-            [titulo]="noticia.titulo"
-            [descricao]="noticia.descricao"
-            [data]="noticia.data"
-          />
-        }
-      </section>
+<ion-content #content>
+  <div class="home-content">
+    <section class="home-section">
+      <div class="section-header">
+        <h2>Últimas Notícias</h2>
+        <a routerLink="/noticias" class="section-link">Ver todas →</a>
+      </div>
+      @for (noticia of noticias; track noticia.id) {
+        <app-card-noticia
+          [imagem]="noticia.imagem"
+          [titulo]="noticia.titulo"
+          [descricao]="noticia.descricao"
+          [data]="noticia.data"
+          [id]="noticia.id"
+          (verMais)="onVerMaisNoticia($event)"
+        />
+      }
+    </section>
 
-      <section class="home-section">
-        <div class="section-header">
-          <h2>Próximos Eventos</h2>
-          <a routerLink="/eventos" class="section-link">Ver todos →</a>
-        </div>
-        @for (evento of eventos; track evento.id ?? evento.titulo) {
-          <app-card-evento
-            [dataDia]="evento.data.dia"
-            [dataMes]="evento.data.mes"
-            [titulo]="evento.titulo"
-            [local]="evento.local"
-            [descricao]="evento.descricao"
-            [id]="evento.id ?? ''"
-            (verMais)="onVerMais($event)"
-          />
-        }
-      </section>
+    <section class="home-section">
+      <div class="section-header">
+        <h2>Próximos Eventos</h2>
+        <a routerLink="/eventos" class="section-link">Ver todos →</a>
+      </div>
+      @for (evento of eventos; track evento.id) {
+        <app-card-evento
+          [dataDia]="evento.data.dia"
+          [dataMes]="evento.data.mes"
+          [dataAno]="evento.data.ano"
+          [titulo]="evento.titulo"
+          [local]="evento.local"
+          [descricao]="evento.descricao"
+          [id]="evento.id"
+          (verMais)="onVerMaisEvento($event)"
+        />
+      }
+    </section>
 
-      <ion-button expand="block" routerLink="/associar" class="lyra-cta">
-        Quero me Associar
-      </ion-button>
-    </div>
-  </ion-content>
+    <ion-button expand="block" routerLink="/associar" class="lyra-cta">
+      Quero me Associar
+    </ion-button>
+  </div>
+</ion-content>
 
-  <app-bottom-nav></app-bottom-nav>
-</ion-page>
+<app-bottom-nav></app-bottom-nav>
