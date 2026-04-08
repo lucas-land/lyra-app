@@ -49,7 +49,12 @@ const routes: Routes = [
   {
     path: 'login-user',
     loadComponent: () => import('./pages/public/login-user/login-user.page').then(m => m.LoginUserPage),
-  }
+  },
+  {
+    path: 'eventos-admin',
+    loadComponent: () => import('./pages/admin/eventos-admin/eventos-admin.page').then( m => m.EventosAdminPage)
+  },
+
 
 
 ];
