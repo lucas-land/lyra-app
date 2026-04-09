@@ -37,6 +37,48 @@
   --padding-end: 12px;
 }
 
+.lyra-brand-action {
+  --background: #fff;
+  --color: var(--lyra-green); // mantém
+  --border-radius: 12px;
+
+  text-transform: none;
+  font-size: 13px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 6px 10px;
+
+  color: var(--lyra-green);
+  font-weight: bold;
+}
+
+.lyra-brand-action span {
+  color: var(--lyra-green);
+  line-height: 1.1;
+}
+
+/* ícone */
+.lyra-brand-action ion-icon{
+  color: var(--lyra-green);
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.lyra-brand-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lyra-brand-title {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 /* Centraliza o conteúdo default do toolbar no eixo vertical (slot interno `content`) */
 :host ion-toolbar.lyra-toolbar-brand::part(content) {
   display: flex;

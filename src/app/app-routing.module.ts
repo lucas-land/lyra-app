@@ -54,8 +54,21 @@ const routes: Routes = [
     path: 'eventos-admin',
     loadComponent: () => import('./pages/admin/eventos-admin/eventos-admin.page').then( m => m.EventosAdminPage)
   },
+  {
+    path: 'noticias-admin',
+    loadComponent: () => import('./pages/admin/noticias-admin/noticias-admin.page').then( m => m.NoticiasAdminPage)
+  },
+  {
+    path: 'noticia-form',
+    loadComponent: () => import('./pages/admin/noticia-form/noticia-form.page').then( m => m.NoticiaFormPage)
+  },
+  {
+    path: 'evento-form',
+    loadComponent: () => import('./pages/admin/evento-form/evento-form.page').then( m => m.EventoFormPage)
+  },
 
 
+  
 
 ];
 

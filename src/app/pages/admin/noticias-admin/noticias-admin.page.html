@@ -1,0 +1,38 @@
+<app-header 
+  variant="adminAction"
+  sectionName="Notícias"
+  sectionButton="Nova Notícia"
+  actionRoute="/noticia-form"
+  backRoute="/dashboard">
+</app-header>
+
+<ion-content [fullscreen]="true">
+  <div class="table-container">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Imagem</th>
+          <th>Título</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><ion-img></ion-img></td>
+          <td>Coral Lyra realiza apresentação especial</td>
+          <td>07/03/2026</td>
+        </tr>
+        <tr>
+          <td><ion-img></ion-img></td>
+          <td>Abertura de inscrições para novos coristas</td>
+          <td>16/03/2026</td>
+        </tr>
+        <tr>
+          <td><ion-img></ion-img></td>
+          <td>Concerto de Primavera 2026</td>
+          <td>28/02/2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ion-content>

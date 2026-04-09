@@ -15,6 +15,46 @@
         </ion-button>
       </div>
     </ion-toolbar>
+  } @else if (variant === 'adminAction') {
+    <ion-toolbar class="lyra-toolbar-brand">
+      <div class="lyra-brand-header-content">
+
+        <div class="lyra-brand-header-left">
+
+          <ion-button fill="clear" class="lyra-back-button" (click)="goBack()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+
+          <div class="lyra-brand-texts">
+            <span class="lyra-brand-title">Gerenciar</span>
+            <span class="lyra-brand-title">{{ sectionName }}</span>
+          </div>
+
+        </div>
+
+        <ion-button fill="clear" class="lyra-brand-action" (click)="goToAction()">
+          <ion-icon name="add-outline"></ion-icon>
+          <span>{{ sectionButton }}</span>
+        </ion-button>
+
+      </div>
+    </ion-toolbar>
+  } @else if (variant === 'adminForm') {
+    <ion-toolbar class="lyra-toolbar-brand">
+      <div class="lyra-brand-header-content">
+
+        <div class="lyra-brand-header-left">
+
+          <ion-button fill="clear" class="lyra-back-button" (click)="goBack()">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </ion-button>
+
+          <span class="lyra-brand-title">{{ titulo }}</span>
+
+        </div>
+
+      </div>
+    </ion-toolbar>
   } @else if (titulo && showBackButton) {
     <ion-toolbar class="lyra-toolbar-page">
       <ion-buttons slot="start">

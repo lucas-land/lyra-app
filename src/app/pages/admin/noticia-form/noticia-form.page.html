@@ -1,0 +1,63 @@
+<app-header
+  [variant]="'adminForm'"
+  [titulo]="'Nova Notícia'"
+  backRoute="/noticias-admin">
+</app-header>
+
+<ion-content [fullscreen]="true" class="form-content">
+
+  <div class="form-container">
+
+    <div class="form-group">
+      <label>Imagem da Notícia</label>
+
+      <div class="upload-box">
+
+        <ion-icon name="cloud-upload-outline" class="upload-icon"></ion-icon>
+
+        <p class="upload-text">
+          Clique para fazer upload<br/>
+          da imagem
+        </p>
+
+        <ion-button class="upload-button">
+          <span>Selecionar Imagem</span>
+        </ion-button>
+
+        <!-- input escondido -->
+        <input type="file" accept="image/*" hidden #fileInput />
+
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Título</label>
+      <input type="text" placeholder="Título da notícia" />
+    </div>
+
+    <div class="form-group">
+      <label>Descrição Resumida</label>
+      <textarea placeholder="Insira uma breve descrição"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Conteúdo Completo</label>
+      <textarea placeholder="Conteúdo completo da notícia"></textarea>
+    </div>
+
+    <div class="button-group">
+
+      <ion-button class="submit-button" routerLink="/noticias-admin">
+        <ion-icon name="save-outline"></ion-icon>
+        <span>Criar Notícia</span>
+      </ion-button>
+
+      <ion-button fill="outline" class="cancel-button" routerLink="/noticias-admin">
+        <span>Cancelar</span>
+      </ion-button>
+
+    </div>
+
+  </div>
+
+</ion-content>

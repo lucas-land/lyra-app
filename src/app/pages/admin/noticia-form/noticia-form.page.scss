@@ -1,0 +1,97 @@
+.form-content {
+  --background: #f5f5f5;
+}
+
+.form-container {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+.upload-box {
+  border: 1px dashed #dcdcdc;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.upload-icon {
+  font-size: 40px;
+  color: #9aa0a6;
+  margin-bottom: 10px;
+}
+
+.upload-text {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.upload-button {
+  --background: #00A63E;
+  --color: white;
+  --border-radius: 8px; 
+}
+
+.upload-button span {
+  padding-left: 5px;
+  text-transform: none;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.submit-button {
+  flex: 1;
+  --background: #00A63E;
+  --color: white;
+  --border-radius: 10px;
+}
+
+.submit-button span{
+  padding-left: 5px;
+  text-transform: none;
+}
+
+.cancel-button {
+  flex: 1;
+  --border-radius: 10px;
+  --border-color: #D1D5DC
+}
+
+.cancel-button span{
+  color: #364153;
+  text-transform: none;
+}
