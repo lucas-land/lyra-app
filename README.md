@@ -67,8 +67,7 @@ Abra o projeto no Android Studio e execute no emulador ou dispositivo.
 
 ## Estrutura do projeto
 
-- `**src/app/core**` – Serviços, guards e models (ex.: Firebase)
-- `**src/app/shared**` – Componentes, interfaces e pipes reutilizáveis
+- `**src/app/shared**` – Componentes e dados reutilizáveis
 - `**src/app/pages/public**` – Telas da área pública (home, notícias, eventos, contato, associar)
 - `**src/app/pages/admin**` – Telas da área administrativa (login, dashboard, gestão de notícias e eventos)
 
