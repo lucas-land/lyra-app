@@ -5,7 +5,6 @@
 :host ion-toolbar {
   --min-height: 64px;
   min-height: 64px;
-  height: 64px;
   box-sizing: border-box;
 }
 
@@ -27,7 +26,7 @@
   }
 }
 
-/* Home + admin: padding só via variáveis Ionic (evita conflito com height: 64px no host) */
+/* Home + admin: padding só via variáveis Ionic */
 .lyra-toolbar-brand {
   --background: linear-gradient(90deg, #00a63e, #016630);
   --color: #fff;

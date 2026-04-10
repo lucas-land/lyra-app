@@ -2,7 +2,13 @@
 // https://ionicframework.com/docs/theming/
 
 // Lyra brand color + tema claro + fonte Inter
+// Capacitor 8 injeta --safe-area-inset-* no documentElement; o Ionic usa --ion-safe-area-*.
 :root {
+  --ion-safe-area-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+  --ion-safe-area-right: var(--safe-area-inset-right, env(safe-area-inset-right, 0px));
+  --ion-safe-area-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+  --ion-safe-area-left: var(--safe-area-inset-left, env(safe-area-inset-left, 0px));
+
   --ion-font-family: "Inter", "Helvetica Neue", sans-serif;
   --lyra-green: #28b463;
   --ion-background-color: #f5f5f5;
