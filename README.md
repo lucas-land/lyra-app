@@ -6,7 +6,6 @@ Aplicativo mobile da Sociedade de Canto Lyra, desenvolvido com Ionic e Angular. 
 
 - **Ionic** – Framework para aplicativos híbridos
 - **Angular** – Framework front-end
-- **Firebase** (AngularFire) – Backend (auth, Firestore, Storage)
 - **TypeScript**
 - **Angular Material** – Componentes para a área administrativa
 - **Capacitor** – Build e execução em dispositivos nativos (Android/iOS)
