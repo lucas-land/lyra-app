@@ -1,6 +1,6 @@
 <app-header
   [variant]="'adminForm'"
-  [titulo]="'Novo Evento'"
+  [titulo]="'Editar Evento'"
   backRoute="/eventos-admin">
 </app-header>
 
@@ -9,56 +9,35 @@
   <div class="form-container">
 
     <div class="form-group">
-      <label>Imagem da Notícia</label>
-
-      <div class="upload-box">
-
-        <ion-icon name="cloud-upload-outline" class="upload-icon"></ion-icon>
-
-        <p class="upload-text">
-          Clique para fazer upload<br/>
-          da imagem
-        </p>
-
-        <ion-button class="upload-button">
-          <span>Selecionar Imagem</span>
-        </ion-button>
-
-        <input type="file" accept="image/*" hidden #fileInput />
-
-      </div>
-    </div>
-
-    <div class="form-group">
       <label>Título</label>
-      <input type="text" placeholder="Título do evento" />
+      <input type="text" [(ngModel)]="evento.titulo" placeholder="Título do evento" />
     </div>
 
     <div class="form-group">
       <label>Data do Evento</label>
-      <input type="date"/>
+      <input type="date" [(ngModel)]="evento.data" />
     </div>
 
     <div class="form-group">
       <label>Local</label>
-      <input type="text" placeholder="Local do evento" />
+      <input type="text" [(ngModel)]="evento.local" placeholder="Local do evento" />
     </div>
 
     <div class="form-group">
       <label>Descrição Resumida</label>
-      <textarea placeholder="Insira uma breve descrição"></textarea>
+      <textarea [(ngModel)]="evento.descricao" placeholder="Insira uma breve descrição"></textarea>
     </div>
 
     <div class="form-group">
       <label>Conteúdo Completo</label>
-      <textarea placeholder="Conteúdo completo do evento"></textarea>
+      <textarea [(ngModel)]="evento.conteudo" placeholder="Conteúdo completo do evento"></textarea>
     </div>
 
     <div class="button-group">
 
       <ion-button class="submit-button" routerLink="/eventos-admin">
         <ion-icon name="save-outline"></ion-icon>
-        <span>Criar Evento</span>
+        <span>Atualizar Evento</span>
       </ion-button>
 
       <ion-button fill="outline" class="cancel-button" routerLink="/eventos-admin">

@@ -37,37 +37,6 @@
   resize: none;
 }
 
-.upload-box {
-  border: 1px dashed #dcdcdc;
-  border-radius: 12px;
-  padding: 24px;
-  text-align: center;
-}
-
-.upload-icon {
-  font-size: 40px;
-  color: #9aa0a6;
-  margin-bottom: 10px;
-}
-
-.upload-text {
-  font-size: 14px;
-  color: #6b7280;
-  margin-bottom: 12px;
-  line-height: 1.4;
-}
-
-.upload-button {
-  --background: #00A63E;
-  --color: white;
-  --border-radius: 8px; 
-}
-
-.upload-button span {
-  padding-left: 5px;
-  text-transform: none;
-}
-
 .button-group {
   display: flex;
   gap: 10px;
@@ -95,4 +64,9 @@
 .cancel-button span{
   color: #364153;
   text-transform: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00A63E;
 }

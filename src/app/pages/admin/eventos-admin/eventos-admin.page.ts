@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
 
 @Component({
@@ -12,9 +12,12 @@ import { HeaderComponent } from '../../../shared/components/header/header.compon
 })
 export class EventosAdminPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  goToEdit(id: number) {
+    this.router.navigate(['/evento-edit', id]);
   }
 
 }

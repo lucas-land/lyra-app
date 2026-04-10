@@ -1,6 +1,6 @@
 <app-header
   [variant]="'adminForm'"
-  [titulo]="'Nova Notícia'"
+  [titulo]="'Editar Notícia'"
   backRoute="/noticias-admin">
 </app-header>
 
@@ -9,46 +9,43 @@
   <div class="form-container">
 
     <div class="form-group">
-      <label>Imagem da Notícia</label>
+      <label>Imagem do Evento</label>
 
-      <div class="upload-box">
+      <div class="image-upload-box">
 
-        <ion-icon name="cloud-upload-outline" class="upload-icon"></ion-icon>
+        @if (noticia.imagem) {
+          <div class="image-preview">
+            <img [src]="noticia.imagem" class="preview-img" />
+          </div>
 
-        <p class="upload-text">
-          Clique para fazer upload<br/>
-          da imagem
-        </p>
-
-        <ion-button class="upload-button">
-          <span>Selecionar Imagem</span>
-        </ion-button>
-
-        <input type="file" accept="image/*" hidden #fileInput />
+          <button class="remove-image" (click)="noticia.imagem = null">
+            Remover imagem
+          </button>
+        }
 
       </div>
     </div>
 
     <div class="form-group">
       <label>Título</label>
-      <input type="text" placeholder="Título da notícia" />
+      <input type="text" [(ngModel)]="noticia.titulo" placeholder="Título da notícia" />
     </div>
 
     <div class="form-group">
       <label>Descrição Resumida</label>
-      <textarea placeholder="Insira uma breve descrição"></textarea>
+      <textarea [(ngModel)]="noticia.descricao" placeholder="Insira uma breve descrição"></textarea>
     </div>
 
     <div class="form-group">
       <label>Conteúdo Completo</label>
-      <textarea placeholder="Conteúdo completo da notícia"></textarea>
+      <textarea [(ngModel)]="noticia.conteudo" placeholder="Conteúdo completo da notícia"></textarea>
     </div>
 
     <div class="button-group">
 
       <ion-button class="submit-button" routerLink="/noticias-admin">
         <ion-icon name="save-outline"></ion-icon>
-        <span>Criar Notícia</span>
+        <span>Atualizar Notícia</span>
       </ion-button>
 
       <ion-button fill="outline" class="cancel-button" routerLink="/noticias-admin">

@@ -1,5 +1,5 @@
 .table-container {
-  margin: 20px 16px; // distância do topo e laterais
+  margin: 20px 16px;
 }
 
 .custom-table {
@@ -8,7 +8,7 @@
   border-spacing: 0;
   background: #fff;
   border-radius: 12px;
-  overflow: hidden; // importante para manter bordas arredondadas
+  overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
@@ -23,13 +23,25 @@
   padding: 12px;
 }
 
-/* linhas horizontais */
 .custom-table tr:not(:last-child) td {
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* linhas verticais */
 .custom-table th:not(:last-child),
 .custom-table td:not(:last-child) {
   border-right: 1px solid #e0e0e0;
+}
+
+.custom-table td:first-child {
+  width: 80px;
+}
+
+.custom-table ion-img {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  object-fit: cover;
 }
